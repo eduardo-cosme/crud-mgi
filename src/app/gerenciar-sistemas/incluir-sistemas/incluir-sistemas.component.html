@@ -1,0 +1,46 @@
+<mat-card>
+  <mat-toolbar color="primary">Incluir Sistema</mat-toolbar>
+
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field class="coluna-50">
+        <input matInput placeholder="Nome" formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field class="coluna-50">
+        <input matInput placeholder="Sigla" formControlName="sigla">
+      </mat-form-field>
+
+      <mat-form-field class="coluna-100">
+        <input matInput placeholder="Descrição" formControlName="descricao">
+      </mat-form-field>
+
+      <mat-form-field class="coluna-50">
+        <input matInput placeholder="Esquema" formControlName="esquema">
+      </mat-form-field>
+
+      <mat-form-field class="coluna-50">
+        <input matInput placeholder="Código Sistema" formControlName="codSistema">
+      </mat-form-field>
+
+      <mat-form-field class="coluna-100">
+        <mat-label>Origem</mat-label>
+        <mat-select formControlName="origem">
+          <mat-option value="Origem1">Origem1</mat-option>
+          <mat-option value="Origem2">Origem2</mat-option>
+          <mat-option value="Origem3">Origem3</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="coluna-100">
+        <input matInput placeholder="Logo" formControlName="logo">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions class="entered-actions">
+    <button mat-raised-button (click)="onCancel()">Voltar</button>
+    <button mat-raised-button (click)="onLimpar()">Limpar</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Gravar</button>
+  </mat-card-actions>
+</mat-card>

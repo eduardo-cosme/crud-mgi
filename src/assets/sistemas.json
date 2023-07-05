@@ -1,0 +1,4 @@
+[
+  {"id":"1", "sistema":"Agregador", "codSistema":"s0001","descricao":"Sistema Agregador", "sigla":"AGR", "esquema":"Agregador"},
+  {"id":"2", "sistema":"Acessos", "codSistema":"s0002","descricao":"Acessos", "sigla":"ACSS", "esquema":"Sistema Acessos"}
+]

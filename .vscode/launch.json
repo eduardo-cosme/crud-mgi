@@ -3,6 +3,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "CrudSistemasApplication",
+      "request": "launch",
+      "mainClass": "com.mgi.crudsistemas.CrudSistemasApplication",
+      "projectName": "crud-sistemas"
+    },
+    {
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",
