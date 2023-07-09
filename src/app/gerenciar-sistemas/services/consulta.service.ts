@@ -13,10 +13,27 @@ export class ConsultaService {
   constructor(private httpClient: HttpClient) { }
   listAll(){
     return this.httpClient.get<Sistemas[]>(this.API).
-      pipe(delay(1000));
+      pipe(first(),
+      tap(sis => console.log(sis)),
+        delay(1000));
   }
 
   save(sistema: Sistemas){
-   return this.httpClient.post<Sistemas>(this.API, sistema).subscribe(result => console.log(result));
+    if(sistema.id){
+      return this.update(sistema);
+    }
+   return this.create(sistema);
+  }
+
+  create(sistema: Sistemas){
+    return this.httpClient.post<Sistemas>(this.API, sistema);
+   }
+
+  getById(id:number){
+    return this.httpClient.get<Sistemas>(`${this.API}/${id}`);
+  }
+
+  update(sistema: Sistemas){
+    return this.httpClient.put<Sistemas>(`${this.API}/${sistema.id}`, sistema);
   }
 }

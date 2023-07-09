@@ -1,6 +1,6 @@
 export interface Sistemas {
-  id:number;
-  sistema:string;
+  id:string;
+  nome:string;
   codSistema:string;
   descricao:string;
   sigla:string;

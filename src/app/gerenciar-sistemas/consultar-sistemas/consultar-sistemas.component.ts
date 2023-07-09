@@ -14,9 +14,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ConsultarSistemasComponent{
   listaSistemas$:Observable<Sistemas[]>;
 
-  displayedColumns=['sistema', 'codSistema', 'descricao','sigla', 'esquema', 'acoes']
-
-
   constructor(
     private consultaService:ConsultaService,
     public dialog: MatDialog,
@@ -44,9 +41,17 @@ export class ConsultarSistemasComponent{
   ngOnInit(): void {
   }
 
+
   onAdd(){
-    //console.log('onAdd');
     this.router.navigate(['new'], {relativeTo: this.route});
   }
+
+  OnEdit(sistema: Sistemas){
+    this.router.navigate(['edit', sistema.id], {relativeTo: this.route});
+  }
+
+
+
+
 
 }
